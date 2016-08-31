@@ -15,15 +15,17 @@ var server = require('../app');
 
 chai.use(chaiHttp);
 
+mockgoose(mongoose);
+
 describe("Device token api", function () {
 
-    before(function() {
-        mockgoose(mongoose).then(function() {
-            mongoose.connect('mongodb://example.com/TestingDB', function(err) {
-                done(err);
-            });
-        });
-    });
+    // before(function() {
+    //     mockgoose(mongoose).then(function() {
+    //         mongoose.connect('mongodb://example.com/TestingDB', function(err) {
+    //             done(err);
+    //         });
+    //     });
+    // });
 
     beforeEach(function () {
         mockgoose.reset();

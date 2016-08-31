@@ -8,7 +8,7 @@ var deviceTokenRoutes = require('./routes/device_tokens');
 
 
 var app = express();
-mongoose.connect('mongo:27017/nogori');
+mongoose.connect('localhost:27017/nogori');
 
 
 app.use(logger('dev'));
